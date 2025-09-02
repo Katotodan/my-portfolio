@@ -44,21 +44,24 @@
 
 /* Animating the skill text */
 .animate-text{
-    height: 4rem;
+    min-height: 4rem;
+    max-height: auto;
     text-align: center;
 }
 .skills{
     display: inline-block;
     width: 27ch;
     vertical-align: bottom;
-    text-wrap: nowrap ;
+    /* text-wrap: nowrap ; */
+    white-space: nowrap;
     overflow: hidden;
     animation: typing 3s steps(33);
+    text-align: center;
 }
 
 /* Typing effect */
 @keyframes typing {
-    from { width: 0; }
+    from { width: 0ch; }
     to { width: 27ch; }
 }
   
