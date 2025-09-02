@@ -27,7 +27,6 @@ export default function Navbar() {
         if (menuRef.current && !menuRef.current.classList.contains('hidden')) {
             closeMenu();
         }
-
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
@@ -103,10 +102,10 @@ export default function Navbar() {
             className="md:hidden fixed text-white bg-inherit w-full top-[64px] 
             z-50 left-0 h-[calc(100dvh-64px)] flex flex-col items-start py-6 space-y-2 text-xl
             transition-transform duration-300 ease-in-out translate-x-full overflow-x-auto">
-                <Link href="/" className="block w-full px-2 py-2 text-white hover:text-blue-600 text-center">Home</Link>
-                <Link href="/about" className="block w-full px-2 py-2 text-white hover:text-blue-600 text-center">About</Link>
-                <Link href="/projects" className="block w-full px-2 py-2 text-white hover:text-blue-600 text-center">Projects</Link>
-                <Link href="/contact" className="block w-full px-2 py-2 text-white hover:text-blue-600 text-center">Contact</Link>
+                <Link href="#home-section" onClick={closeMenu} className="block w-full px-2 py-2 text-white hover:text-blue-600 text-center">Home</Link>
+                <Link href="#about-section" onClick={closeMenu} className="block w-full px-2 py-2 text-white hover:text-blue-600 text-center">About</Link>
+                <Link href="#project-section" onClick={closeMenu} className="block w-full px-2 py-2 text-white hover:text-blue-600 text-center">Projects</Link>
+                <Link href="#contact-section" onClick={closeMenu} className="block w-full px-2 py-2 text-white hover:text-blue-600 text-center">Contact</Link>
             </div>
         </nav>
     );
